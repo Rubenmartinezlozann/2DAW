@@ -1,0 +1,53 @@
+<!doctype html>
+<html id=documento>
+<head>
+<title></title>
+</head>
+<style>
+    #boton{
+        border-radius: 25px;
+        background-color: blue;
+        font-size: medium;
+        color: white;
+    }
+
+    #documento{
+        background-color: silver;
+        font: sans-serif;
+        text-align: center;
+        font-size: 14;
+        flex-direction: column;
+    }
+
+    #Pie_de_pagina{
+        background-color: black;
+        color: white;
+        font-size: 12;
+        position:absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        align-self: center;
+    }
+</style>
+<body>
+    <div>
+        <h1>Trabajo con selectores</h1>
+        <p>Trabajo con selectores</p>
+    </div>
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ejemplo.png" id="foto" height="200" width="300"><br>
+        <button id="boton" value="Cambiar Imagen" onclick="CambiaImagen()">Cambiar imagen</button>
+    </div><br>
+
+    <footer id="Pie_de_pagina">
+        <a href="https://www.euskadi.eus/noticia/2013/derechos-de-autor-copyright-copyleft-y-creative-commons/web01-a2wz/es/" style="color: white;">&copy; Rubén Martínez Lozano - 2020</a>
+    </footer>
+    <script>
+            function CambiaImagen(){
+                var elem=document.getElementById('foto')
+                elem.src="https://i0.wp.com/www.silocreativo.com/wp-content/uploads/2015/05/logotipo-google.jpg?w=666&quality=100&strip=all&ssl=1"
+            }
+    </script>
+</body>
+</html>
