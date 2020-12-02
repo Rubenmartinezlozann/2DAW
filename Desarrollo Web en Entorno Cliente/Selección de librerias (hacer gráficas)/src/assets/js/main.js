@@ -1,3 +1,5 @@
+const Chart = require('chart.js')
+
 const obtenDatos = (elemento) => {
     let ArrayFinal = [];
     let aux = '';
