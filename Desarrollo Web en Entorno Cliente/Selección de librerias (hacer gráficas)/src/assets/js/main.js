@@ -51,38 +51,44 @@ document.addEventListener("DOMContentLoaded", () => {
         const temperaturas = obtenDatos(document.getElementById('temperaturas'));
         const lluvias = obtenDatos(document.getElementById('lluvias'));
 
-        let chart = new Chart(document.getElementById('grafico').getContext('2d'), {
-            type: 'line',
-            data: {
-                labels: meses,
-                datasets: [{
-                    label: 'Temperaturas (ºC)',
-                    data: temperaturas,
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1,
+        if (meses.length == temperaturas.length && meses.length == lluvias.length) {
+            let chart = new Chart(document.getElementById('grafico').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: meses,
+                    datasets: [{
+                        label: 'Temperaturas (ºC)',
+                        data: temperaturas,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                    },
+                    {
+                        label: 'Lluvias (mm3)',
+                        data: lluvias,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }],
                 },
-                {
-                    label: 'Lluvias (mm3)',
-                    data: lluvias,
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }],
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
                 }
+            });
+            if (primerClick) {
+                btnGrafico.value = 'actualizar gráfica';
+                document.getElementById('grafico').style.display = 'block';
+                primerClick = false;
             }
-        });
-        if (primerClick) {
-            btnGrafico.value = 'actualizar gráfica';
-            document.getElementById('grafico').style.display = 'block';
+        } else {
+            alert('Los campos deben tener el mismo número de elementos');
         }
+
     })
 });
