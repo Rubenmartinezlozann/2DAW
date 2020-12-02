@@ -26,3 +26,9 @@ section {
 html{
     background-color: whitesmoke;
 }
+
+canvas{
+    width:800px !important;
+    height:500px !important;
+    align-self: center;
+}

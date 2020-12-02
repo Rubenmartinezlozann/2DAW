@@ -5,7 +5,9 @@
     <title>AE4</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,16 +21,23 @@
         </article>
         <article>
             <label>Temperaturas</label>
-            <input id="temperaturas" type="text" placeholder="4, 3, 5,..." value="3, 4, 3, 5, 7, 10, 12, 15, 12, 10, 7, 5" />
+            <input id="temperaturas" type="text" placeholder="4, 3, 5,..."
+                value="3, 4, 3, 5, 7, 10, 12, 15, 12, 10, 7, 5" />
         </article>
         <article>
             <label>Lluvias</label>
-            <input id="lluvias" type="text" placeholder="40 , 60 , 110 ,..." value="40, 60, 110 , 70, 20, 15, 10, 15, 90, 120, 80, 50" />
+            <input id="lluvias" type="text" placeholder="40 , 60 , 110 ,..."
+                value="40, 60, 110 , 70, 20, 15, 10, 15, 90, 120, 80, 50" />
         </article>
-        <input id="btnGrafico" type="submit" value="Mostrar gráfica" />
+        <article>
+            <input id="btnGrafico" type="submit" value="Mostrar gráfica" />
+            <input id="btnTipo" type="submit" value="Cambiar a gráfica de barras" />
+        </article>
+
     </section>
     <section>
-        <canvas id="grafico" width="100px" height="100px" style="display: none;"></canvas>
+        <canvas id="graficoLinea" style="display: none;"></canvas>
+        <canvas id="graficoBarra" style="display: none;"></canvas>
     </section>
 </body>
 
