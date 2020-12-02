@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AE4</title>
+    <link rel="stylesheet" href="/src/assets/css/index.css">
+    <script src="/src/assets/js/main.js"></script>
+</head>
+
+<body>
+    <h1>Selección y uso de librerías</h1>
+    <h2>Introduce los siguientes datos separados por comas, los datos de un mismo campo deberán usar las mismas unidades
+    </h2>
+    <section>
+        <article>
+            <label>Meses</label>
+            <input id="meses" type="text" placeholder="1,2,3,..." value="1,2,3,4,5,6,7,8,9,10,11,12" />
+        </article>
+        <article>
+            <label>Temperaturas</label>
+            <input id="temperaturas" type="text" placeholder="4ºC, 3ºC, 5ºC,..." value="3ºC, 4ºC, 3ºC, 5ºC, 7ºC, 10ºC, 12ºC, 15ºC, 12ºC, 10ºC, 7ºC, 5ºC" />
+        </article>
+        <article>
+            <label>Lluvias</label>
+            <input id="lluvias" type="text" placeholder="40 mm3, 60 mm3, 110 mm3,..." value="40 mm3, 60 mm3, 110 mm3, 70 mm3, 20 mm3, 15 mm3, 10 mm3, 15 mm3, 90 mm3, 120 mm3, 80 mm3, 50 mm3" />
+        </article>
+        <input id="mostrarGrafica" type="submit" value="Mostrar gráfica" />
+    </section>
+    <section>
+        <canvas id="glinea"></canvas>
+        <canvas id="gbarra"></canvas>
+    </section>
+</body>
+
+</html>
