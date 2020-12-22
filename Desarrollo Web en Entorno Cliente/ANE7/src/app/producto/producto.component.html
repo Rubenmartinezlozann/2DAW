@@ -5,23 +5,32 @@
 </head>
 
 <body>
+    
     <section>
         <article>
-            <img src="{{imagen}}">
+            <img src={{urlImagen}}>
         </article>
-        <article>
+        <article class="datos">
+            <br>
             <label>Código</label><br>
-            <label {{codigo}}></label><br><br>
+            <label class="valor">{{codigo}}</label><br><br>
             <label>Nombre</label><br>
-            <label {{nombre}}></label><br><br>
+            <label class="valor">{{nombre}}</label><br><br>
             <label>Descripción</label><br>
-            <label {{descripcion}}></label><br><br>
+            <label class="valor">{{descripcion}}</label><br><br>
             <label>Precio</label><br>
-            <label {{precio}}></label><br><br>
+            <label class="valor">{{precio}}</label><br><br>
             <label>Stock</label><br>
-            <label {{stock}}></label>
+            <label class="valor">{{stock}}</label>
         </article>
     </section>
-</body>
+    <!--
+    <a routerLink="/home"></a>
+    <a routerLink="/product"></a>
 
+    <router-outlet>
+    </router-outlet>
+    -->
+</body>
+ 
 </html>
