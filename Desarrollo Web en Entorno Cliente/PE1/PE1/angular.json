@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "PE1"
+  "defaultProject": "PE1",
+  "cli": {
+    "analytics": "0981a9c4-0e40-4233-8aa8-61d722a66d3c"
+  }
 }
