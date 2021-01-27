@@ -7,7 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { InformesComponent } from './informes/informes.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GraficoComponent } from './grafico/grafico.component'
+import { GraficoComponent } from './grafico/grafico.component';
+import { BotonDetallesComponent } from './boton-detalles/boton-detalles.component';
+import { BotonEliminarComponent } from './boton-eliminar/boton-eliminar.component';
+import { BotonAltaComponent } from './boton-alta/boton-alta.component'
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { GraficoComponent } from './grafico/grafico.component'
     ProyectosComponent,
     InformesComponent,
     GraficoComponent,
+    BotonDetallesComponent,
+    BotonEliminarComponent,
+    BotonAltaComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
 
@@ -9,16 +9,20 @@ import { HttpClient } from '@angular/common/http'
 })
 export class ProyectosComponent implements OnInit {
 
+  datos = <any>[];
 
   constructor(private http: HttpClient) {
 
   }
 
-  getProyectos() {
-    return this.http.get('http://localhost:8000/proyecto/getProyectos');
+  ngOnInit(): void {
+    this.http.get('http://localhost:8000/proyecto/getProyectos').subscribe(res => {
+      this.datos = res;
+      console.log(this.datos);
+    })
   }
 
-  ngOnInit(): void {
+  ngAfterViweInit(): void {
 
   }
 

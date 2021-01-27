@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-grafico',
@@ -9,17 +9,14 @@ export class GraficoComponent implements OnInit {
 
   data: any
 
-  @Input() datos = [];
-  @Input() nombre ='';
-
-  nombre
-
-  datos.forEach(elem => {
-    
-  });
+  @Input() datos = [{ nombre: '' }];
+  @Input() nombre = '';
 
   constructor() {
-    this.data = {
+
+
+
+    /*this.data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
@@ -29,10 +26,15 @@ export class GraficoComponent implements OnInit {
           data: [65, 59, 80, 81, 56, 55, 40]
         },
       ]
-    }
+    }*/
   }
 
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit(): void {
+
   }
 
 }
