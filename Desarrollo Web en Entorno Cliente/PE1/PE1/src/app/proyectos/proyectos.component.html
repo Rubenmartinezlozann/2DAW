@@ -1,12 +1,18 @@
 <p-table [value]="datos">
-    <ng-template pTemplate="header">
+    <ng-template pTemplate="caption">
+        Listado de productos
+    </ng-template>
+    <ng-template pTemplate="header" styleClass="p-datatable-sm">
         <tr>
-            <th>Name</th>
+            <th>Nombre</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
         <tr>
             <td>{{product.nombre}}</td>
+            <td><button routerLink="/detalle/{{product.id}}">Ver detalles</button></td>
+            <td><button>Eliminar</button></td>
         </tr>
     </ng-template>
+    <button routerLink="/altaProyecto">Añadir proyecto</button>
 </p-table>

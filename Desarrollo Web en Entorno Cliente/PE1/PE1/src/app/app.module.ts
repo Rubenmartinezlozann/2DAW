@@ -8,9 +8,9 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { InformesComponent } from './informes/informes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GraficoComponent } from './grafico/grafico.component';
-import { BotonDetallesComponent } from './boton-detalles/boton-detalles.component';
-import { BotonEliminarComponent } from './boton-eliminar/boton-eliminar.component';
-import { BotonAltaComponent } from './boton-alta/boton-alta.component'
+import { TableModule } from 'primeng/table';
+import { DetalleComponent } from './detalle/detalle.component';
+import { AltaProyectoComponent } from './alta-proyecto/alta-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +19,14 @@ import { BotonAltaComponent } from './boton-alta/boton-alta.component'
     ProyectosComponent,
     InformesComponent,
     GraficoComponent,
-    BotonDetallesComponent,
-    BotonEliminarComponent,
-    BotonAltaComponent,
+    DetalleComponent,
+    AltaProyectoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

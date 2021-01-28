@@ -1,5 +1,6 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { AltaProyectoComponent } from '../alta-proyecto/alta-proyecto.component';
 
 
 @Component({
@@ -18,12 +19,10 @@ export class ProyectosComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('http://localhost:8000/proyecto/getProyectos').subscribe(res => {
       this.datos = res;
-      console.log(this.datos);
     })
-  }
-
-  ngAfterViweInit(): void {
 
   }
-
+  AddProyecto(nombre: any, descripcion: any) {
+    this.http.post<any>('http://localhost:8000/proyecto/addProyecto', { nombre: nombre, descripcion: descripcion });
+  }
 }
