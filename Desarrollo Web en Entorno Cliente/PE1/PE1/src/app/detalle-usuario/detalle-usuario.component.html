@@ -6,6 +6,8 @@
     <input type="text" disabled value="{{datos.name}}"><br><br>
     <label>Contraseña</label><br>
     <input type="password" disabled value="{{datos.password}}"><br><br>
+    <label>Fecha de creación</label><br>
+    <input type="date" disabled value="{{datos.date}}">
 </article>
 <article>
     <h3>Cambio de contraseña</h3>
@@ -15,6 +17,6 @@
     <label>Nueva contraseña</label><br>
     <input type="text" (change)="obtenerNuevaContrasenya($event)"><br><br>
     <label>Confirmación</label><br>
-    <input type="text" (change)="obtenerConfirmacionContrasenya($event)">
-    <button (click)="cambiarContrasenya()">Cambiar contraseñaa</button>
-</article>  
+    <input type="text" (change)="obtenerConfirmacionContrasenya($event)"><br><br>
+    <button (click)="cambiarContrasenya()">Cambiar contraseña</button>
+</article>

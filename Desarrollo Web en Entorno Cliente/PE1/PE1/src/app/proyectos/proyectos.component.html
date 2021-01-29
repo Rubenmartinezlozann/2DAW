@@ -1,6 +1,6 @@
 <p-table [value]="datos">
     <ng-template pTemplate="caption">
-        Listado de productos
+        Listado de proyectos
     </ng-template>
     <ng-template pTemplate="header" styleClass="p-datatable-sm">
         <tr>
@@ -23,5 +23,13 @@
 <label>Descripcion:</label>
 <br>
 <input type="text" (change)='obtenerDescripcion($event)' />
+<br><br>
+<label>Url de la imagen:</label>
+<br>
+<input type="text" (change)='obtenerUrl($event)' />
+<br><br>
+<label>Duración estimada:</label>
+<br>
+<input type="text" (change)='obtenerTiempoEstimado($event)' />
 <br><br>
 <button (click)="altaProyecto()">Alta</button>

@@ -9,7 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 import { DetalleProyectoComponent } from './detalleProyecto/detalle.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ChartModule } from 'primeng/chart';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
+import { InformeUsuariosComponent } from './informe-usuarios/informe-usuarios.component';
+import { InformeMensajesComponent } from './informe-mensajes/informe-mensajes.component';
+import { InformeProyectosComponent } from './informe-proyectos/informe-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.compo
     DetalleProyectoComponent,
     UsuariosComponent,
     DetalleUsuarioComponent,
+    InformeUsuariosComponent,
+    InformeMensajesComponent,
+    InformeProyectosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     TableModule,
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

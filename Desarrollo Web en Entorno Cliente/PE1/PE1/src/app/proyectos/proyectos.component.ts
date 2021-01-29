@@ -12,6 +12,8 @@ export class ProyectosComponent implements OnInit {
   datos = <any>[];
   txtNombre: any;
   txtDescripcion: any;
+  txtUrl: any;
+  txtTiempoEstimado: any;
   constructor(private http: HttpClient) {
 
   }
@@ -26,11 +28,10 @@ export class ProyectosComponent implements OnInit {
   }
 
   altaProyecto() {
-    this.http.post('http://localhost:8000/proyecto/addProyecto', { 'nombre': this.txtNombre, 'descripcion': this.txtDescripcion, 'imagen': 'i' }).subscribe(res => {
+    this.http.post('http://localhost:8000/proyecto/addProyecto', { 'nombre': this.txtNombre, 'descripcion': this.txtDescripcion, 'imagen': this.txtUrl, 'tiempo_estimado': this.txtTiempoEstimado }).subscribe(res => {
       console.log(res);
       this.obtenerProyectos();
     })
-
   }
 
   obtenerNombre(texto: any) {
@@ -39,6 +40,14 @@ export class ProyectosComponent implements OnInit {
 
   obtenerDescripcion(texto: any) {
     this.txtDescripcion = texto.currentTarget.value
+  }
+
+  obtenerUrl(texto: any) {
+    this.txtUrl = texto.currentTarget.value
+  }
+
+  obtenerTiempoEstimado(texto: any) {
+    this.txtTiempoEstimado = texto.currentTarget.value
   }
 
   eliminarProyecto(id: any) {
