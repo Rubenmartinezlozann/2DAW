@@ -10,9 +10,18 @@
     <ng-template pTemplate="body" let-product>
         <tr>
             <td>{{product.nombre}}</td>
-            <td><button routerLink="/detalle/{{product.id}}">Ver detalles</button></td>
-            <td><button>Eliminar</button></td>
+            <td><button routerLink="/detalleProyecto/{{product.id}}">Ver detalles</button></td>
+            <td><button (click)="eliminarProyecto(product.id)">Eliminar</button></td>
         </tr>
     </ng-template>
-    <button routerLink="/altaProyecto">Añadir proyecto</button>
 </p-table>
+<h3>Dar de alta un proyecto</h3>
+<label>Nombre:</label>
+<br>
+<input type="text" (change)='obtenerNombre($event)' />
+<br><br>
+<label>Descripcion:</label>
+<br>
+<input type="text" (change)='obtenerDescripcion($event)' />
+<br><br>
+<button (click)="altaProyecto()">Alta</button>

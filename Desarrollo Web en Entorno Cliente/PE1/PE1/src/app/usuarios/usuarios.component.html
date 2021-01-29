@@ -1,0 +1,27 @@
+<p-table [value]="datos">
+    <ng-template pTemplate="caption">
+        Listado de Usuarios
+    </ng-template>
+    <ng-template pTemplate="header" styleClass="p-datatable-sm">
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-usuario>
+        <tr>
+            <td>{{usuario.nombre}}</td>
+            <td><button routerLink="/detalleUsuario/{{usuario.id}}">Ver detalles</button></td>
+            <td><button (click)="eliminarUsuario(usuario.id)">Eliminar</button></td>
+        </tr>
+    </ng-template>
+</p-table>
+<h3>Dar de alta un usuario</h3>
+<label>Nombre:</label>
+<br>
+<input type="text" (change)="obtenerNombre($event)" />
+<br><br>
+<label>Contraseña:</label>
+<br>
+<input type="password" (change)="obtenerContrasenya($event)" />
+<br><br>
+<button (click)="altaUsuario()">Alta</button>
