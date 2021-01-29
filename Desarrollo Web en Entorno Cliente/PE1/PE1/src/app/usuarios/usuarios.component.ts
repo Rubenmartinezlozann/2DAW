@@ -35,7 +35,7 @@ export class UsuariosComponent implements OnInit {
     this.txtNombre = texto.currentTarget.value
   }
 
-  obtenerDescripcion(texto: any) {
+  obtenerContrasenya(texto: any) {
     this.txtContrasenya = texto.currentTarget.value
   }
 

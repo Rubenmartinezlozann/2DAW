@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { InformesComponent } from './informes/informes.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GraficoComponent } from './grafico/grafico.component';
 import { TableModule } from 'primeng/table';
 import { DetalleProyectoComponent } from './detalleProyecto/detalle.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -17,7 +16,6 @@ import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.compo
     AppComponent,
     ProyectosComponent,
     InformesComponent,
-    GraficoComponent,
     DetalleProyectoComponent,
     UsuariosComponent,
     DetalleUsuarioComponent,

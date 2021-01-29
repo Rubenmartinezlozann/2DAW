@@ -1,7 +1,20 @@
-<h3>Detalles del usuario</h3>
-<label>Id</label><br>
-<input type="text" disabled value="{{datos.id}}"><br><br>
-<label>Nombre</label><br>
-<input type="text" disabled value="{{datos.nombre}}"><br><br>
-<label>Contraseña</label><br>
-<input type="text" disabled value="{{datos.descripcion}}"><br><br>
+<article>
+    <h3>Detalles del usuario</h3>
+    <label>Id</label><br>
+    <input type="text" disabled value="{{datos.id}}"><br><br>
+    <label>Nombre</label><br>
+    <input type="text" disabled value="{{datos.name}}"><br><br>
+    <label>Contraseña</label><br>
+    <input type="password" disabled value="{{datos.password}}"><br><br>
+</article>
+<article>
+    <h3>Cambio de contraseña</h3>
+    <label>Antigua contraseña</label><br>
+    <input type="text" (change)="obtenerAntiguaContrasenya($event)">
+    <br><br><br>
+    <label>Nueva contraseña</label><br>
+    <input type="text" (change)="obtenerNuevaContrasenya($event)"><br><br>
+    <label>Confirmación</label><br>
+    <input type="text" (change)="obtenerConfirmacionContrasenya($event)">
+    <button (click)="cambiarContrasenya()">Cambiar contraseñaa</button>
+</article>  

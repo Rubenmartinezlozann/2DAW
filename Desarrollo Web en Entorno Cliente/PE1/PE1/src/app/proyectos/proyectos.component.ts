@@ -46,6 +46,5 @@ export class ProyectosComponent implements OnInit {
       console.log(res);
       this.obtenerProyectos();
     })
-
   }
 }

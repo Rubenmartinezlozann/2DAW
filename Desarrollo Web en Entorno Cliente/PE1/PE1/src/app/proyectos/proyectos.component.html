@@ -10,8 +10,8 @@
     <ng-template pTemplate="body" let-product>
         <tr>
             <td>{{product.nombre}}</td>
-            <td><button routerLink="/detalleProyecto/{{product.id}}">Ver detalles</button></td>
-            <td><button (click)="eliminarProyecto(product.id)">Eliminar</button></td>
+            <td><button routerLink="/detalleProyecto/{{product.id}}">Ver detalles</button>
+                <button (click)="eliminarProyecto(product.id)">Eliminar</button></td>
         </tr>
     </ng-template>
 </p-table>
