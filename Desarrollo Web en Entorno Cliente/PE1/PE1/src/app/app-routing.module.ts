@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DetalleMensajeComponent } from './detalle-mensaje/detalle-mensaje.component';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
 import { DetalleProyectoComponent } from './detalleProyecto/detalle.component';
 import { InformeMensajesComponent } from './informe-mensajes/informe-mensajes.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'informeUsuarios', component: InformeUsuariosComponent },
   { path: 'informeProyectos', component: InformeProyectosComponent },
   { path: 'informeMensajes', component: InformeMensajesComponent },
+  { path: 'detalleMensaje/:id', component: DetalleMensajeComponent },
 ];
 
 @NgModule({

@@ -14,6 +14,7 @@ import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.compo
 import { InformeUsuariosComponent } from './informe-usuarios/informe-usuarios.component';
 import { InformeMensajesComponent } from './informe-mensajes/informe-mensajes.component';
 import { InformeProyectosComponent } from './informe-proyectos/informe-proyectos.component';
+import { DetalleMensajeComponent } from './detalle-mensaje/detalle-mensaje.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { InformeProyectosComponent } from './informe-proyectos/informe-proyectos
     InformeUsuariosComponent,
     InformeMensajesComponent,
     InformeProyectosComponent,
+    DetalleMensajeComponent,
   ],
   imports: [
     BrowserModule,

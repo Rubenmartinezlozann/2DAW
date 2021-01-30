@@ -1,1 +1,14 @@
-<p>informe-mensajes works!</p>
+<p-table [value]="datos">
+    <ng-template pTemplate="header">
+        <tr>
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-mensaje>
+        <tr>
+            <td>{{mensaje.mensaje}}</td>
+            <button routerLink="/detalleMensaje/{{mensaje.id}}">Ver detalles</button>
+        </tr>
+        <hr>
+    </ng-template>
+</p-table>
