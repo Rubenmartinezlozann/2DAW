@@ -1,18 +1,19 @@
 <label>Introduce una fecha</label><br>
-<input type="text" (change)="obtenerFecha($event)"/><br><br>
-<button (click)="obtenerDatos()">Ver datos</button>
+<input type="date" (change)="obtenerDatos($event)" /><br><br>
 
-<p-table [value]="datos">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Nombre</th>
-            <th>Contraseña</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-usu>
-        <tr>
-            <td>{{usu.name}}</td>
-            <td>{{usu.password}}</td>
-        </tr>
-    </ng-template>
-</p-table>
+<div style="width: 30%;">
+    <p-table [value]="datos" styleClass="p-datatable-striped">
+        <ng-template pTemplate="header">
+            <tr>
+                <td>Nombre de usuario</td>
+                <td>Contraseña</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-usu>
+            <tr>
+                <td>{{usu.name}}</td>
+                <td>{{usu.password}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

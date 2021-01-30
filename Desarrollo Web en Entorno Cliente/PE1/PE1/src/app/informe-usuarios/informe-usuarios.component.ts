@@ -17,12 +17,8 @@ export class InformeUsuariosComponent implements AfterViewInit {
     
   }
 
-  obtenerFecha(texto: any) {
-    this.fecha = texto.currentTarget.value
-  }
-
-  obtenerDatos() {
-    this.http.get('http://localhost:8000/usuario/getUsuariosPorFecha/' + this.fecha).subscribe(res => {
+  obtenerDatos(texto: any) {
+    this.http.get('http://localhost:8000/usuario/getUsuariosPorFecha/' + texto.currentTarget.value).subscribe(res => {
       this.datos = res;
     })
 

@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    color: black;
+    font-size: 1.2em;
+    font-family: Calibri;
+    background-color: silver;
+}
+
+h1, h3{
+    font-size: 1.4em;
+}
+
+
+a{
+    background-color: white;
+}
+
+a, a:link, a:visited, a:active {
+    text-decoration:none;
+    color: blue;
+    padding: 10px;
+}
+
+button{
+    border-radius: 5px;
+    font-size: 0.6em;
+    background-color: white;
+    color: black;
+    min-width: 5%;
+}
+
+input{
+    width: 30%;
+    font-size: 0.7em;
+}
+
+
+.clearboth{
+    clear: both;
+}

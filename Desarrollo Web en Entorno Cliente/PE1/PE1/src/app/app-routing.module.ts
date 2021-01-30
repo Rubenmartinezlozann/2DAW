@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DetalleMensajeComponent } from './detalle-mensaje/detalle-mensaje.component';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
 import { DetalleProyectoComponent } from './detalleProyecto/detalle.component';
+import { HomeComponent } from './home/home.component';
 import { InformeMensajesComponent } from './informe-mensajes/informe-mensajes.component';
 import { InformeProyectosComponent } from './informe-proyectos/informe-proyectos.component';
 import { InformeUsuariosComponent } from './informe-usuarios/informe-usuarios.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'informeProyectos', component: InformeProyectosComponent },
   { path: 'informeMensajes', component: InformeMensajesComponent },
   { path: 'detalleMensaje/:id', component: DetalleMensajeComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({

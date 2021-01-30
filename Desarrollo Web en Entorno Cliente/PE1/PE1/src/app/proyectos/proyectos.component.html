@@ -1,10 +1,9 @@
-<p-table [value]="datos">
+<p-table [value]="datos" styleClass="p-datatable-striped">
     <ng-template pTemplate="caption">
-        Listado de proyectos
+        <h3>Listado de proyectos</h3> 
     </ng-template>
     <ng-template pTemplate="header" styleClass="p-datatable-sm">
         <tr>
-            <th>Nombre</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
