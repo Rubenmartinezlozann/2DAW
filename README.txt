@@ -1,0 +1,2 @@
+He modificado los informes, el informe de stock de productos es un informe de proyectos con duración menor a 5horas, el informe de altas de usuarios por dia mostrara
+los usuarios dados de alta el día seleccionado
